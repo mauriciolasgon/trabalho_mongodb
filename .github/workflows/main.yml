@@ -21,4 +21,4 @@ jobs:
         docker tag ghcr.io/mauriciolasgon/trabalho_mongodb/mongo  ghcr.io/mauriciolasgon/trabalho_mongodb/mongo:${{ github.sha }}
     - run: |
         docker push ghcr.io/mauriciolasgon/trabalho_mongodb/mongo
-        docker ghcr.io/mauriciolasgon/trabalho_mongodb/mongo:${{ github.sha }}
+        docker push ghcr.io/mauriciolasgon/trabalho_mongodb/mongo:${{ github.sha }}
