@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  app:
+    build:
+      args:
+        user: laravel
+        uid: 1000
+      context: ./
+      dockerfile: .Dockerfile
+    image: mongo
+    container_name: banco
+    restart: unless-stopped
+    working_dir: /db/
+    volumes:
+      - ./db
+    networks:
+      - mynetwork
+
+  
+networks:
+  mynetwork:
+    driver: bridge
